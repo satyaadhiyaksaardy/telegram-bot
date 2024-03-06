@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  telegram-bot:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - NAME=Prod
+    restart: unless-stopped
