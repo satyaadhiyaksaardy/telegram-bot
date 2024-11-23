@@ -106,9 +106,9 @@ docker-compose up
 telegram-prayer-bot/
 │
 │── api_services/
-│   ├
-│   ├
-│   ├
+│   ├── __init__.py
+│   ├── api_services.py      # Contains logic for interacting with external APIs.
+│   ├── prayer_times.py      # Handles fetching and processing prayer times.
 │
 ├── bot/
 │   ├── __init__.py
@@ -121,9 +121,9 @@ telegram-prayer-bot/
 │
 ├── utils/
 │   ├── __init__.py
-│   ├── ffmpeg_utils.py      # Helper functions for time-based operations
+│   ├── ffmpeg_utils.py      # Handles video and image capturing from RTSP streams.
 │   ├── utils.py             # Helper functions for time-based operations
-│   ├── weather_utils.py     # Helper functions for time-based operations
+│   ├── weather_utils.py     # Fetches from api weather-related image.
 │
 ├── .env                     # Environment variables
 ├── app.py                   # Entry point of the bot
