@@ -6,11 +6,15 @@ WORKDIR /usr/src/app
 
 # Install dependencies required for building certain Python packages
 RUN apk add --no-cache \
+    tzdata \
     ffmpeg
 
 # Install Python packages from requirements.txt
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Set time zone to UTC+7 Jakarta
+ENV TZ=Asia/Jakarta
 
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .

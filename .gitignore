@@ -1,1 +1,5 @@
 .env
+.vscode
+assets/*
+images/*
+**/__pycache__/
